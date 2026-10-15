@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Hospital Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <h2>HMS</h2>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-link active">Dashboard</a>
+                <a href="patients.html" class="nav-link">Patients</a>
+                <a href="doctors.html" class="nav-link">Doctors</a>
+                <a href="appointments.html" class="nav-link">Appointments</a>
+                <a href="medicines.html" class="nav-link">Medicines</a>
+                <a href="billing.html" class="nav-link">Billing</a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <a href="#" class="nav-link settings-link">Settings</a>
+                <a href="login.html" class="nav-link logout">Logout</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-header">
+                <div>
+                    <h1>Dashboard</h1>
+                    <p>Hospital Management System</p>
+                </div>
+                <div class="header-right">
+                    <button class="notification-btn" title="Notifications"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></button>
+                    <div class="user-profile">
+                        <div class="user-avatar">A</div>
+                        <div>
+                            <strong>Admin</strong>
+                            <small>Administrator</small>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <section class="welcome-section">
+                <div>
+                    <h2>Welcome back, Admin!</h2>
+                    <p>Here's what's happening in your hospital today.</p>
+                </div>
+            </section>
+
+            <section class="stats-grid">
+                <div class="stat-card"><div><p>Total Patients</p><h2 id="statPatients">0</h2><span>Registered patients</span></div></div>
+                <div class="stat-card"><div><p>Total Doctors</p><h2 id="statDoctors">0</h2><span id="statDoctorsNote">-</span></div></div>
+                <div class="stat-card"><div><p>Today's Appointments</p><h2 id="statAppointments">0</h2><span id="statPendingNote">-</span></div></div>
+                <div class="stat-card"><div><p>Total Revenue</p><h2 id="statRevenue">₹0</h2><span>From paid bills</span></div></div>
+            </section>
+
+            <section class="dashboard-grid">
+                <div class="dashboard-card appointments-card">
+                    <div class="card-header">
+                        <div>
+                            <h3>Today's Appointments</h3>
+                            <p>Upcoming patient appointments</p>
+                        </div>
+                        <a href="appointments.html">View All</a>
+                    </div>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr><th>Patient</th><th>Doctor</th><th>Time</th><th>Status</th></tr>
+                            </thead>
+                            <tbody id="todayBody"><tr><td colspan="4">Loading...</td></tr></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <div>
+                            <h3>Quick Actions</h3>
+                            <p>Common hospital tasks</p>
+                        </div>
+                    </div>
+                    <div class="quick-actions">
+                        <a href="add-patient.html" class="quick-action"><div><strong>Add Patient</strong><small>Register a new patient</small></div></a>
+                        <a href="doctors.html" class="quick-action"><div><strong>Manage Doctors</strong><small>View doctor information</small></div></a>
+                        <a href="appointments.html?add=1" class="quick-action"><div><strong>Book Appointment</strong><small>Create new appointment</small></div></a>
+                        <a href="billing.html?add=1" class="quick-action"><div><strong>Create Bill</strong><small>Generate patient bill</small></div></a>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="dashboard-footer">
+                <p>&copy; 2026 Hospital Management System</p>
+            </footer>
+        </main>
+    </div>
+    <script src="js/api.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patients | Hospital Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-module="patients">
+    <div class="dashboard-container">
+
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <h2>HMS</h2>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="patients.html" class="nav-link active">Patients</a>
+                <a href="doctors.html" class="nav-link">Doctors</a>
+                <a href="appointments.html" class="nav-link">Appointments</a>
+                <a href="medicines.html" class="nav-link">Medicines</a>
+                <a href="billing.html" class="nav-link">Billing</a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <a href="#" class="nav-link settings-link">Settings</a>
+                <a href="login.html" class="nav-link logout">Logout</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-header">
+                <div>
+                    <h1>Patients</h1>
+                    <p>Manage hospital patients</p>
+                </div>
+                <div class="header-right">
+                    <button class="notification-btn" title="Notifications"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></button>
+                    <div class="user-profile">
+                        <div class="user-avatar">A</div>
+                        <div>
+                            <strong>Admin</strong>
+                            <small>Administrator</small>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <section class="patient-actions">
+                <div>
+                    <h2>Patients Record</h2>
+                    <p>View and manage registered patients</p>
+                </div>
+                <button class="add-patient-btn" id="addBtn">+ Add Patient</button>
+            </section>
+
+            <section class="patient-search">
+                <input type="text" id="searchInput" placeholder="Search Patient by Name, ID or Phone">
+                <button id="searchBtn">Search</button>
+            </section>
+
+            <section class="dashboard-card">
+                <div class="card-header">
+                    <div>
+                        <h3>All Patients</h3>
+                        <p>Currently registered patients</p>
+                    </div>
+                    <span id="totalCount">Total : 0</span>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Patient ID</th>
+                                <th>Name</th>
+                                <th>Age</th>
+                                <th>Gender</th>
+                                <th>Phone</th>
+                                <th>Blood Group</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <footer class="dashboard-footer">
+                <p>&copy; 2026 Hospital Management System</p>
+            </footer>
+        </main>
+    </div>
+    <script src="js/api.js"></script>
+    <script src="js/module.js"></script>
+</body>
+</html>
